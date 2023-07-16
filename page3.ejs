@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+        <html>
+           <head>
+              <title>contact us</title>
+              <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+           </head><body>
+            <a href="index.ejs">Home</a>|
+            <a href="page1.ejs">Members</a>|
+            <a href="page2.ejs">Wallet</a>|
+            <a href="page3.ejs">find us</a>|
+            <a href="header.ejs">info</a>|
+            <a href="page5.ejs">Gallery</a>|
+            <table>
+             <tr>
+               <td class ="label">
+               <label>Full Name</label>
+               </td>
+               <td class ="input">
+               <input type ="text"></input>
+               </td>
+             </tr>
+             <tr>
+               <td> 
+               <label>Email Address</label>
+               </td>
+               <td class="=input">
+               <input type ="text"></input>
+               </td>
+             </tr>
+            <tr>
+               <td> 
+               <label for = "message">Message</label>
+               </td>
+               <td id ="mss"><textarea type = "text" id = "Message" name = "message" rows = "6"> </textarea>
+               </td>
+            </tr>
+         </table>
+         <hi>We are located here</hi>
+              <div id = "map" style = "width: 500px; height: 500px;"></div><script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+              <script>
+                 // Creating map options
+                 var mapOptions = {
+                    center: [17.385044, 78.486671],
+                    zoom: 10
+                 }
+                 
+                 // Creating a map object
+                 var map = new L.map('map', mapOptions).setView([53.408713, -7.921143], 13);
+                 
+                 // Creating a Layer object
+                 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+                 
+                 // Adding layer to the map
+                 map.addLayer(layer);
+              </script>
+           </body>
+           
+        </html>
+
+
+
+
+        
